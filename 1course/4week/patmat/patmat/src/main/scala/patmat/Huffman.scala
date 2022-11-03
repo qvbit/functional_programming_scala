@@ -68,10 +68,9 @@ trait Huffman extends HuffmanInterface:
    *       println("integer is  : "+ theInt)
    *   }
    */
-  def times(chars: List[Char]): List[(Char, Int)] =
-    if chars.isEmpty then Nil
-    else
-      (chars.head, chars.count(c => c == chars.head)) :: times(chars.filter(c => c != chars.head))
+  def times(chars: List[Char]): List[(Char, Int)] = chars match
+    case List() => Nil
+    case x :: xs => (x, xs.count(c => c == x) + 1) :: times(xs.filter(c => c != x))
 
 
   /**
@@ -81,12 +80,27 @@ trait Huffman extends HuffmanInterface:
    * head of the list should have the smallest weight), where the weight
    * of a leaf is the frequency of the character.
    */
-  def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = ???
+  def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] =
+    def asLeaf(pair: (Char, Int)): Leaf = Leaf(pair._1, pair._2)
+
+    def insert(x: Leaf, xs: List[Leaf]): List[Leaf] = xs match
+      case List() => List(x)
+      case y :: ys => if x.weight > y.weight then x :: xs else y :: insert(x, ys)
+    
+    def isort(xs: List[(Char, Int)]): List[Leaf] = xs match
+      case List() => List()
+      case y :: ys => insert(asLeaf(y), isort(ys))
+
+    isort(freqs)
+    
 
   /**
    * Checks whether the list `trees` contains only one single code tree.
    */
-  def singleton(trees: List[CodeTree]): Boolean = ???
+  def singleton(trees: List[CodeTree]): Boolean = trees match
+    case List() => false
+    case x :: xs => xs.isEmpty
+  
 
   /**
    * The parameter `trees` of this function is a list of code trees ordered

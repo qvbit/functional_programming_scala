@@ -8,7 +8,6 @@ object IntSet:
     def apply(x: Int): IntSet = Empty.incl(x)
     def apply(x: Int, y: Int): IntSet = Empty.incl(x).incl(y)
 
-
 class Empty() extends IntSet:
     def contains(x: Int): Boolean = false
     def incl(x: Int): IntSet = NonEmpty(x, Empty(), Empty())

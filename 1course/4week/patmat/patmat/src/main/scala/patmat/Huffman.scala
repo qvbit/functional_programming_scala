@@ -240,7 +240,7 @@ trait Huffman extends HuffmanInterface:
     case Leaf(char, weight) => List((char, Nil))
     case Fork(left, right, chars, weight) => mergeCodeTables(convert(left), convert(right))
 
-    
+
   /**
    * This function takes two code tables and merges them into one. Depending on how you
    * use it in the `convert` method above, this merge method might also do some transformations
@@ -248,7 +248,8 @@ trait Huffman extends HuffmanInterface:
    */
   def mergeCodeTables(a: CodeTable, b: CodeTable): CodeTable = 
     def addBit(table: CodeTable, bit: Bit): CodeTable =
-      (table.head._1, bit :: table.head._2) :: addBit(table.tail, bit)
+      if table.isEmpty then Nil
+      else (table.head._1, bit :: table.head._2) :: addBit(table.tail, bit)
 
     addBit(a, 0) ::: addBit(b, 1)
     

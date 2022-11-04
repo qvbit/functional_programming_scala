@@ -1361,3 +1361,4 @@ WARNING: Unmatched cancel notification for request id 8993
 2022.11.04 15:12:11 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/test/scala/patmat/HuffmanSuite.scala[0m
 2022.11.04 15:12:13 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
 2022.11.04 15:12:13 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:32:54 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m

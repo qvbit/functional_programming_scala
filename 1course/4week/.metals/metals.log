@@ -138,3 +138,4 @@ makeOrderedLeafList(l2)
 2022.11.03 17:24:22 INFO  time: evaluated worksheet 'patmat.worksheet.sc' in 0.31s[0m
 2022.11.03 17:24:28 INFO  time: evaluated worksheet 'patmat.worksheet.sc' in 0.33s[0m
 2022.11.03 17:24:40 INFO  time: evaluated worksheet 'patmat.worksheet.sc' in 0.35s[0m
+2022.11.03 17:49:57 INFO  shutting down Metals[0m

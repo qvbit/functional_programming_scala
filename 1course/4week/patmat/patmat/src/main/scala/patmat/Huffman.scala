@@ -85,7 +85,7 @@ trait Huffman extends HuffmanInterface:
 
     def insert(x: Leaf, xs: List[Leaf]): List[Leaf] = xs match
       case List() => List(x)
-      case y :: ys => if x.weight > y.weight then x :: xs else y :: insert(x, ys)
+      case y :: ys => if x.weight < y.weight then x :: xs else y :: insert(x, ys)
     
     def isort(xs: List[(Char, Int)]): List[Leaf] = xs match
       case List() => List()
@@ -98,8 +98,8 @@ trait Huffman extends HuffmanInterface:
    * Checks whether the list `trees` contains only one single code tree.
    */
   def singleton(trees: List[CodeTree]): Boolean = trees match
-    case List() => false
-    case x :: xs => xs.isEmpty
+    case x :: Nil => true
+    case _ => false
   
 
   /**
@@ -114,7 +114,16 @@ trait Huffman extends HuffmanInterface:
    * If `trees` is a list of less than two elements, that list should be returned
    * unchanged.
    */
-  def combine(trees: List[CodeTree]): List[CodeTree] = ???
+  def combine(trees: List[CodeTree]): List[CodeTree] = trees match
+    case List() => trees
+    case x :: Nil => trees
+    case x1 :: x2 :: xs => insert(makeCodeTree(x1, x2), xs)
+
+    def insert(x: CodeTree, xs: List[CodeTree]): List[CodeTree] = xs match
+      case List() => List(x)
+      case y :: ys => if weight(x) < weight(y) then x :: xs else y :: insert(x, ys)
+    
+  
 
   /**
    * This function will be called in the following way:

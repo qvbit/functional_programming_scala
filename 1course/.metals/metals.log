@@ -1234,3 +1234,130 @@ WARNING: Unmatched cancel notification for request id 1784
 2022.11.04 10:35:43 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
 2022.11.04 10:36:07 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
 2022.11.04 10:36:07 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 11:32:33 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 11:33:12 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+Exception in thread "pool-3-thread-2" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022.11.04 11:36:31 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 11:36:54 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 13:13:43 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 13:23:25 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 13:23:29 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 13:25:34 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 13:28:11 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 13:28:15 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 13:28:15 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 13:30:32 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+[31merror[39m: 4week/patmat.worksheet.sc:60:41: 
+Not found: type Bit
+  def decode(tree: CodeTree, bits: List[Bit]): List[Char] = 
+                                        ^^^
+[31merror[39m: 4week/patmat.worksheet.sc:61:55: 
+Not found: type Bit
+    def decodeHelper(subTree: CodeTree, remBits: List[Bit]): List[Char] = subTree match
+                                                      ^^^
+[31merror[39m: 4week/patmat.worksheet.sc:67:47: 
+Found:    Unit
+Required: List[Char]
+        else decodeHelper(right, remBits.tail)
+                                              ^
+[31merror[39m: 4week/patmat.worksheet.sc:81:20: 
+Not found: type Bit
+  val secret: List[Bit] = List(0,0,1,1,1,0,1,0,1,1,1,0,0,1,1,0,1,0,0,1,1,0,1,0,1,1,0,0,1,1,1,1,1,0,1,0,1,1,0,0,0,0,1,0,1,1,1,0,0,1,0,0,1,0,0,0,1,0,0,0,1,0,1)
+                   ^^^
+[31merror[39m: 
+patmat.worksheet.sc:105 (mdoc generated code) 
+ Found:    (MdocApp.this.secret : List[<error Not found: type Bit>])
+Required: mdoc.internal.sourcecode.SourceStatement[Nothing]
+    $doc.binder(secret, 80, 6, 80, 12);
+
+
+2022.11.04 13:30:40 INFO  time: evaluated worksheet 'patmat.worksheet.sc' in 0.27s[0m
+[31merror[39m: 4week/patmat.worksheet.sc:69:47: 
+Found:    Unit
+Required: List[Char]
+        else decodeHelper(right, remBits.tail)
+                                              ^
+2022.11.04 13:30:46 INFO  time: evaluated worksheet 'patmat.worksheet.sc' in 0.29s[0m
+Nov 04, 2022 1:30:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4815
+[31merror[39m: 4week/patmat.worksheet.sc:69:47: 
+Found:    Unit
+Required: List[Char]
+        else decodeHelper(right, remBits.tail)
+                                              ^
+2022.11.04 13:30:54 INFO  time: evaluated worksheet 'patmat.worksheet.sc' in 0.26s[0m
+2022.11.04 13:31:27 INFO  time: evaluated worksheet 'patmat.worksheet.sc' in 0.43s[0m
+[31merror[39m: 4week/patmat.worksheet.sc:66:14: 
+Found:    List[Char]
+Required: Char
+        else List(char) :: decodeHelper(tree, remBits)
+             ^^^^^^^^^^
+2022.11.04 13:32:03 INFO  time: evaluated worksheet 'patmat.worksheet.sc' in 0.22s[0m
+2022.11.04 13:32:24 INFO  time: evaluated worksheet 'patmat.worksheet.sc' in 0.45s[0m
+[31merror[39m: 4week/patmat.worksheet.sc:65:33: 
+Found:    (char : Char)
+Required: List[Char]
+        if remBits.isEmpty then char
+                                ^^^^
+2022.11.04 13:32:34 INFO  time: evaluated worksheet 'patmat.worksheet.sc' in 0.24s[0m
+2022.11.04 13:32:41 INFO  time: evaluated worksheet 'patmat.worksheet.sc' in 0.4s[0m
+2022.11.04 13:33:59 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 13:33:59 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+Nov 04, 2022 1:47:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5441
+Nov 04, 2022 1:52:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5532
+2022.11.04 13:54:43 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 13:56:35 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 13:57:47 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 13:58:43 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 13:59:54 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 14:00:12 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 14:00:19 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 14:01:40 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 14:02:00 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 14:03:09 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 14:13:03 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 14:50:44 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 14:51:29 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 14:52:49 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 14:52:49 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 14:53:04 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 14:55:55 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 14:55:57 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 14:57:38 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+Nov 04, 2022 2:57:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8542
+2022.11.04 14:58:19 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 14:59:52 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:00:10 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:00:24 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:01:58 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:02:00 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+Nov 04, 2022 3:04:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8993
+2022.11.04 15:04:59 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:05:00 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:05:15 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:05:35 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:05:39 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:05:55 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:05:56 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:07:17 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:07:24 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:07:24 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:08:02 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:08:30 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:09:17 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:10:20 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/test/scala/patmat/HuffmanSuite.scala[0m
+2022.11.04 15:11:40 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:12:11 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/test/scala/patmat/HuffmanSuite.scala[0m
+2022.11.04 15:12:11 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/test/scala/patmat/HuffmanSuite.scala[0m
+2022.11.04 15:12:13 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
+2022.11.04 15:12:13 WARN  no build target for: /home/nabee/functional_programming/1course/4week/patmat/patmat/src/main/scala/patmat/Huffman.scala[0m
